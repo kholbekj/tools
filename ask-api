@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# Author: http://github.com/kholbekj
+
+puts "Gimme a URL, please." if ARGV[0].nil?
+unless ARGV[0].nil?
+  link = ARGV[0]
+  puts `curl #{link} | python -m json.tool`
+end
